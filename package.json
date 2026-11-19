@@ -14,7 +14,7 @@
   },
   "files": [
     "bin",
-    "dist",
+    "dist/src",
     "README.md",
     "LICENSE"
   ],
@@ -22,10 +22,12 @@
     "node": ">=20.0.0"
   },
   "scripts": {
+    "clean": "node -e \"import('node:fs').then(fs => fs.rmSync('dist', { recursive: true, force: true }))\"",
     "typecheck": "tsc --noEmit",
-    "build": "tsc",
+    "build": "npm run clean && tsc",
     "test": "npm run build && node --test dist/test/*.test.js",
-    "demo": "npm run build && node dist/scripts/demo.js"
+    "demo": "npm run build && node dist/scripts/demo.js",
+    "prepublishOnly": "npm run typecheck && npm test"
   },
   "keywords": [
     "git",
