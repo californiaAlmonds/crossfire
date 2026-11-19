@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.crossfire-tmp/
+*.tgz
+crossfire-report.html

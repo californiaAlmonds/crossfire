@@ -1,0 +1,58 @@
+{
+  "name": "crossfire-git",
+  "version": "1.0.0",
+  "description": "Zero-dependency collision radar for parallel Git worktrees and AI coding agents: catches zero-conflict semantic symbol breaks, DB migration clashes, port collisions, and textual conflicts before git merge lies to you.",
+  "type": "module",
+  "bin": {
+    "crossfire": "./bin/crossfire.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "default": "./dist/src/index.js"
+    }
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "demo": "npm run build && node dist/scripts/demo.js"
+  },
+  "keywords": [
+    "git",
+    "worktree",
+    "merge-conflict",
+    "semantic-merge",
+    "ai-agents",
+    "claude-code",
+    "antigravity",
+    "cursor",
+    "codex",
+    "developer-tools",
+    "static-analysis",
+    "sarif"
+  ],
+  "license": "GPL-3.0-only",
+  "homepage": "https://github.com/californiaAlmonds/crossfire#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/californiaAlmonds/crossfire.git"
+  },
+  "bugs": {
+    "url": "https://github.com/californiaAlmonds/crossfire/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}

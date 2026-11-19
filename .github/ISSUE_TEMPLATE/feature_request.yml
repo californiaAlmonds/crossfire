@@ -1,0 +1,17 @@
+name: Feature / New Collision Rule
+description: Propose a new language analyzer, schema detector, or orchestrator integration
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Parallel Workflow Collision Scenario
+      description: Describe the silent merge breakage or multi-worktree friction you want Crossfire to catch.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Rule or CLI Behavior
+    validations:
+      required: true

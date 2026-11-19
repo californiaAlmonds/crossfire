@@ -1,0 +1,27 @@
+name: Bug Report / False Positive
+description: Report a crash, missed collision, or false-positive finding
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for reporting an issue! Minimal reproducible Git setups help us fix issues fast.
+  - type: input
+    id: version
+    attributes:
+      label: Crossfire & Git Versions
+      placeholder: "crossfire 1.0.0, git 2.51.0, Node v22.23.4, Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction Steps / Sample Diffs
+      description: What did Branch/Worktree A and Branch/Worktree B change?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs. Actual Output
+    validations:
+      required: true
